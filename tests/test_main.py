@@ -1,14 +1,14 @@
 import unittest
-from pastaga import pastaga
+from pastaga.main import pastaga
 
 class TestMain(unittest.TestCase):
-    def test_pastaga(self):
+    def test_pastaga_scenario_1(self):
         compte_les_verres = pastaga(8, 10)
         self.assertEqual(18, compte_les_verres)
 
-    def test_pastaga(self):
+    def test_pastaga_scenario_2(self):
         compte_les_verres = pastaga(12, 10)
-        self.assertEqual(22, compte_les_verres)
+        self.assertEqual(24, compte_les_verres)
 
 if __name__ == '__main__':
     unittest.main()
