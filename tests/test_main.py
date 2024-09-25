@@ -1,5 +1,5 @@
 import unittest
-from pastaga_fr.main import pastaga
+from pastaga_flavrei.main import pastaga
 
 class TestMain(unittest.TestCase):
     def test_pastaga_scenario_1(self):
