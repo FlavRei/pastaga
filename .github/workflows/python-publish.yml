@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
@@ -35,7 +35,8 @@ jobs:
         poetry install
     - name: Run UnitTests
       run: |
-        poetry run python -m unittest
+        poetry run coverage run --source=./pastaga_flavrei
+        coverage report -m
     - name: Build package
       if: github.ref == 'refs/heads/main'
       run: |
